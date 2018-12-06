@@ -18,7 +18,7 @@ let revealCard = function(nr) {
 if (cards[nr] !== false) {
 
     $(`#c${nr}`)
-    .css("background-image", `url("diablogra/${cards[nr]}")`)
+    .css("background-image", `url("diablogra_cards/${cards[nr]}")`)
     .removeClass('card')
     .addClass('cardA');
 
@@ -92,12 +92,12 @@ function diffrentCards(nr, pair) {
         $(`#c${nr}`)
         .removeClass('cardA')
         .addClass('card')
-        .css("background-image", `url("diablogra/cover.jpg")`);
+        .css("background-image", `url("diablogra_cards/cover.jpg")`);
 
         $(`#c${pair}`)
         .removeClass('cardA')
         .addClass('card')
-        .css("background-image", `url("diablogra/cover.jpg")`);
+        .css("background-image", `url("diablogra_cards/cover.jpg")`);
 
     }, 1500);
 }
