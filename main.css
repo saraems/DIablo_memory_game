@@ -89,7 +89,7 @@ p {
 .btn {
 	height: 30px;
 	width: 200px;
-	background-color: darkred;
+	background-color: #ce0404;
 	color: black;
 	border: none;
 	border-radius: 3px;
@@ -142,7 +142,7 @@ div#information_for_winner {
 	font-size: 50px;
 }
 
-#btn {
+#btns {
 	height: 30%;
 	width: 100%;
 	display: flex;
@@ -189,7 +189,7 @@ div#information_for_winner {
 .side_menu_element_left {
 
 	transform: rotate(90deg);
-	background-color: darkred;
+	background-color: rgb(160, 13, 13);
 	color: black;
 	box-sizing: border-box;
 	margin: 40px -45px;
@@ -222,7 +222,7 @@ div#information_for_winner {
 .side_menu_element_right {
 
 	transform: rotate(-90deg);
-	background-color: darkred;
+	background-color: rgb(160, 13, 13);
 	color: black;
 	box-sizing: border-box;
 	margin: 70px 0;
@@ -253,7 +253,7 @@ div#information_for_winner {
 	width: 70%;
 	background-color: black;
 	opacity: 1;
-	color: darkred;
+	color: red;
 	border: 5px solid red;
 	z-index:9999;
 	border-radius: 10px;
