@@ -5,19 +5,20 @@ body
 	color: rgb(160, 13, 13);
     font-family: 'Lobster', sans-serif;
     font-size: 28px;
+	height: 100%;
+	padding: 0;
 }
 
 a:link    { color: rgb(160, 13, 13); text-decoration: none; }
 a:visited { color: rgb(160, 13, 13); }
 a:active  { color: rgb(160, 13, 13); }
-a:hover   { color: red; }
+a:hover   { color: red; transition: all .3s ease-in-out; }
 
 h1 {
-	font-size: 64px;
+	font-size: 60px;
 	font-weight: 400;
 	text-align: center;
 	letter-spacing: 5px;
-	margin-top: 20px;
 	margin-top: 20px;
 	margin-bottom: 0px;}
 
@@ -27,6 +28,8 @@ p {
 	margin-top: 10px;
 	margin-bottom: 0px;
 }
+
+
 
 .board {
 	width: 600px;
@@ -71,7 +74,7 @@ p {
 	border-radius: 4px;
 	}
 
-.none {
+.disappear {
 	background-color: black;
 	width: 125px;
 	height: 125px;
@@ -82,3 +85,259 @@ p {
 	filter:brightness(70%);	
 
 }
+
+.btn {
+	height: 30px;
+	width: 200px;
+	background-color: #ce0404;
+	color: black;
+	border: none;
+	border-radius: 3px;
+	font-family: 'Lobster', sans-serif;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: red;
+}
+
+div#won {
+	opacity:0.8;
+	filter: alpha(opacity=80);
+	background-color: black;
+	position:fixed;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	z-index:9;
+}
+
+
+div#information_for_winner {
+	height: 300px;
+	width: 500px;
+	background-color: black;
+	color: red;
+	border: 5px solid red;
+	z-index:9999;
+	position: fixed;
+	top:25%;
+	left:30%;
+	display: flex;
+	font-size: 20px;
+	opacity: 1;
+}
+
+#head {
+	height: 70%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+#head span {
+	font-size: 50px;
+}
+
+#btns {
+	height: 30%;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	box-sizing: border-box;
+	padding-top: 15px;
+}
+
+#information_for_winner {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+}
+
+.btn a {
+	text-decoration: none;
+	color: black;
+	display: block;
+}
+
+.winner_pop_up {
+	display: none;
+}
+
+.hidden_hero_text {
+	display: none;
+	list-style: none;
+}
+
+.side_menu_left {
+	font-size: 16px;
+	list-style: none;
+	position: fixed;
+	left:0;
+	top: 5%;
+	height: 600px;
+	width: 80px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.side_menu_element_left {
+
+	transform: rotate(90deg);
+	background-color: rgb(160, 13, 13);
+	color: black;
+	box-sizing: border-box;
+	margin: 40px -45px;
+	width: 150%;
+	height: 30%;
+	left:0;
+	text-align: center;
+	padding-top: 15px;
+	border-radius: 5px;
+}
+
+.side_menu_element_left:hover, .side_menu_element_right:hover {
+	background-color: red;
+	transition: all .3s ease-in-out;
+}
+
+.side_menu_right {
+	font-size: 16px;
+	list-style: none;
+	position: fixed;
+	right:0;
+	top: 5%;
+	height: 600px;
+	width: 80px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.side_menu_element_right {
+
+	transform: rotate(-90deg);
+	background-color: rgb(160, 13, 13);
+	color: black;
+	box-sizing: border-box;
+	margin: 70px 0;
+	width: 150%;
+	height: 30%;
+	left:0;
+	text-align: center;
+	padding-top: 15px;
+	border-radius: 5px;
+}
+
+.character_panel_background {
+
+
+	position:fixed;
+	display: flex;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	z-index:9;
+	align-items: center;
+	justify-content: center;
+}
+
+.character_container {
+	height: 90%;
+	width: 70%;
+	background-color: black;
+	opacity: 1;
+	color: red;
+	border: 5px solid red;
+	z-index:9999;
+	border-radius: 10px;
+	display: flex;
+	font-size: 20px;
+}
+
+.character {
+	width: 50%;
+}
+
+.character_description_container {
+	width: 50%;
+	padding: 30px 30px 30px 20px;
+	font-size: 18px;
+}
+
+.character_description_container h {
+	font-size: 30px;
+	text-align: center;
+	padding: 10px;
+	display: inline-block;
+
+}
+
+.character {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.character_img {
+	background-size: cover;
+	background-position: center;
+	height: 70%;
+	width: 95%;
+}
+
+#wizard {
+	background-image: url("diablo_characters/wizard2.jpg");
+}
+#crusader {
+	background-image: url("diablo_characters/crusarder.jpg");
+}
+#barbarian {
+	background-image: url("diablo_characters/barbarian.jpg");
+}
+#hunter{
+	background-image: url("diablo_characters/hunter2.jpg");
+	background-position: top;
+}
+#necromancer{
+	background-image: url("diablo_characters/necromancer2.jpg");
+}
+#witch_doctor{
+	background-image: url("diablo_characters/witch_doctor3.jpg");
+}
+#monk{
+	background-image: url("diablo_characters/monk1.jpg");
+	background-position: bottom;
+}
+
+.back_to_game {
+	margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.none {
+	display: none;
+}
+
+
+
+
+

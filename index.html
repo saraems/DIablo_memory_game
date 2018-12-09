@@ -3,9 +3,9 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>Gwent Memory Test</title>
-	<meta name="description" content="JS Memory Game inspired by Gwent">
-	<meta name="keywords" content="javascript, jQuery, game, gwent, memory">
+	<title>Diablo Memory Test</title>
+	<meta name="description" content="JS Memory Game inspired by Dizablo">
+	<meta name="keywords" content="javascript, jQuery, game, diablo, memory">
 	
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
 	
@@ -48,11 +48,175 @@
 			<div class="card" id="c10"></div>
 			<div class="card" id="c11"></div>
 
+			<button class="btn" value="Refresh Page" onClick="window.location.reload()">Restart game</button>
 			<div class="score"> Turn counter: 0</div>
+
 
 		</div>
 
 	</article>
+
+
+
+	<div class="side_menu_left">
+
+		<div class="side_menu_element_left">Wizard</div>
+		<div class="side_menu_element_left">Crusader</div>
+		<div class="side_menu_element_left">Barbarian</div>
+		<div class="side_menu_element_left">Demon Hunter</div>
+
+	</div>
+
+
+	<div class="side_menu_right">
+
+		<div class="side_menu_element_right">Necromancer </div>
+		<div class="side_menu_element_right">Witch Doctor</div>
+		<div class="side_menu_element_right">Monk</div>
+
+	</div>
+
+
+
+	<div class="character_panel_background none">
+		<div class="character_container">
+			<div class="character">
+				<div class="character_img" id="wizard"></div>
+				<button class="back_to_game btn">Back to game</button>
+			</div>
+			<div class="character_description_container">
+				<div class="character_description">
+					<h>Wizard</h><br>
+					<p>Wizards are renegade spellcasters who use their bodies as vessels for arcane energy, forsaking the more careful path favored by other magic users. They manipulate all manner of forces to disintegrate, burn, and freeze their foes, and they can control time and light to teleport, create powerful illusions, and deflect oncoming attacks. </p><br>
+					<p>Wizards grip wands and staves to focus their less potent magics, blasting at their enemies while gathering the energy or time necessary to destroy them in a dazzling hail of arcane might.</p><br>
+					<p>With few exceptions, wizard attacks are conducted at a distance, away from danger. As living artillery, wizards are well suited to relying on long-range destructive power. </p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<div class="character_panel_background none">
+			<div class="character_container">
+				<div class="character">
+					<div class="character_img" id="crusader"></div>
+					<button class="back_to_game btn">Back to game</button>
+				</div>
+				<div class="character_description_container">
+					<div class="character_description">
+						<h>Crusader</h><br>
+						<p> Crusaders are unbending champions of faith and law. These living fortresses use impenetrable plate and towering shields to wade through scores of foes, leaving demonic bodies smoldering in their wake. </p><br>
+						<p> The thick of battle is unforgiving, but crusaders rush in without hesitation, relying on holy magic and heavy armor to guarantee victory. Well-trained crusaders are adept at deflecting attacks entirely, often shrugging off massive blows that would fell lesser combatants. If pressed, they can sacrifice speed and mobility for pure staying power.</p><br>
+						<p> Bone-crunching flails and wicked shields are perfect for melee, but crusaders are hardly limited to extinguishing evil at close range. When one of these divinely empowered warriors joins battle, blazing fire and blinding light follow, smiting entire packs of enemies who dare to resist judgment. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<div class="character_panel_background none">
+		<div class="character_container">
+			<div class="character">
+				<div class="character_img" id="barbarian"></div>
+				<button class="back_to_game btn">Back to game</button>
+			</div>
+			<div class="character_description_container">
+				<div class="character_description">
+					<h>Barbarian</h><br>
+					<p> For ages, the barbarians dwelling in the shadow of Mount Arreat were shaped to be as strong and unyielding as stone. Immense in size and unmatched in ferocity, they were charged from birth with a duty passed through generations: to protect the sacred mountain. </p><br>
+					<p> When their homeland was shattered, many barbarians lost faith. They became aimless, haunted by their past, traveling from place to place without honor or direction.
+
+						But not all barbarians have given up their vigil. Some still honor the harsh snows of Arreat's summit and prowl the outskirts of its crater. They recall being handed axes and spears at an age when city children were clinging to their toys… and they burn with shame at the failure of their people.</p><br>
+					<p> These barbarians strive to find a new purpose for themselves in a changed world, and they will crush any who stand in their way.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="character_panel_background none">
+		<div class="character_container">
+			<div class="character">
+				<div class="character_img" id="hunter"></div>
+				<button class="back_to_game btn">Back to game</button>
+			</div>
+			<div class="character_description_container">
+				<div class="character_description">
+					<h>Demon Hunter</h><br>
+					<p> Demon hunters are relentless vigilantes who execute their infernal targets with an arsenal of ranged weapons. They crouch and take aim far from danger, relying on bows, deadly traps, and projectiles to swiftly bring an end to the creatures that haunt their world. </p><br>
+					<p>With sweeping blasts of shot, wide salvos of arrows and timed explosives at their disposal, demon hunters excel at devastating groups of foes who cluster together. Hunters’ pinpoint accuracy also allows them to deal with stronger monsters at a distance: they can snipe at key targets or fall back while snapping off kill shots at advancing foes.</p><br>
+					<p> However, demon hunters’ focus on ranged combat and limited melee-weapons training leave them in danger when they’re cornered or surrounded. </p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="character_panel_background none">
+		<div class="character_container">
+			<div class="character">
+				<div class="character_img" id="necromancer"></div>
+				<button class="back_to_game btn">Back to game</button>
+			</div>
+			<div class="character_description_container">
+				<div class="character_description">
+					<h> Necromancer</h><br>
+					<p>Necromancers are ruthless commanders, and masters of life and death. These dark spellcasters reanimate the dead as skeletal remains, curse their enemies with deadly magics, and further torment them with the carcasses of their defeated fellows.</p><br>
+					<p>Life and death are part of a greater cycle, and necromancers are not afraid to walk the line between both. They willfully use their own life force to fuel powerful abilities and gain the upper hand in combat. Being at death’s door does not concern them if no adversaries remain to deal the killing blow.</p><br>
+					<p>Necromancers prefer to strike from a distance, unleashing destruction from afar. The skeletal undead under their command overwhelm enemies before they have a chance to strike, and the horrific curses the necromancers employ cripple even the most resistant of demons.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="character_panel_background none">
+		<div class="character_container">
+			<div class="character">
+				<div class="character_img" id="witch_doctor"></div>
+				<button class="back_to_game btn">Back to game</button>
+			</div>
+			<div class="character_description_container">
+				<div class="character_description">
+					<h> Witch doctor</h><br>
+					<p>Witch doctors are spiritual warriors who summon dead souls and crawling creatures to do their bidding. By surrounding themselves with conjured zombies and vermin, witch doctors are free to assault their enemies with exploding skulls, acrid poison clouds, and wasting curses.</p><br>
+					<p>The ability to infect, slow and terrify their enemies gives witch doctors unprecedented control over a battlefield. They can manipulate opposing attacks and movements with debuffs and crowd control spells, rendering enemies easy prey for hungry pets. Witch doctors can also lay down fields of fire and venom that slowly leech life from advancing foes.</p><br>
+					<p>Although some witch doctors avoid melee combat in favor of augmenting their pets and crippling their enemies from afar, they are also more than capable of slaying weakened foes with their own hands.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="character_panel_background none">
+		<div class="character_container">
+			<div class="character">
+				<div class="character_img" id="monk"></div>
+				<button class="back_to_game btn">Back to game</button>
+			</div>
+			<div class="character_description_container">
+				<div class="character_description">
+					<h> Monk</h><br>
+					<p>Monks of the Sahptev faith train their bodies and minds so that they may become the foremost holy warriors of the land of Ivgorod. Within the cloisters of the Patriarchs, the monks endure harsh trials both physical and spiritual, proving their devotion and attaining unmatched focus.</p><br>
+					<p>Daily ritualistic cleansings help monks purify their spirits and overcome the corruption that gnaws at the hearts of all men. In the pursuit of martial perfection, they also hone their legendary balance and clarity, skills that allow them to master both unarmed combat and a diverse array of weapons.	</p><br>
+					<p>After a lifetime of preparation, anointed monks are permitted to leave their monasteries' halls to serve the decrees of the Patriarchs. The emblem on their foreheads marks them as survivors, achievers, and pillars of their society.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="winner_pop_up">
+		<div id="won">
+		</div>
+		<div id="information_for_winner">
+			<div id="head">
+				<h><span>Congratulation</span><br>You won Diablo memory game in<span id="turns">  </span>turns!</h>
+			</div>
+			<div id="btns">
+				<button class="btn" id="reload" value="Refresh Page" onClick="window.location.reload()">Play again</button>
+				<button class="btn" id="go"><a href="https://us.diablo3.com/en/"> Visit Diablo page</a></button>
+			</div>
+		</div>
+	</div>
 
 
 
