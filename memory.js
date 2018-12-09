@@ -3,17 +3,27 @@ let oneVisible = false;
 let turnCounter = 0;
 let pair;
 let guessedPair = 0;
-let locked = false; 
-let cards = ["barberian.jpg", "croser.jpg","barberian.jpg", "diablo.jpg", "doctor.jpg", "croser.jpg", "wizard.jpg", "monk.jpg", "diablo.jpg", "monk.jpg", "doctor.jpg", "wizard.jpg" ];
+let locked = false;
 
 let backToGameButtons = document.querySelectorAll(".back_to_game");
 let characterContainer = document.querySelectorAll(".character_panel_background");
 let charactersPanels = document.querySelectorAll(".side_menu_element_left, .side_menu_element_right");
 
+let cardsList = ["barberian.jpg", "croser.jpg","barberian.jpg", "diablo.jpg", "doctor.jpg", "croser.jpg", "wizard.jpg", "monk.jpg", "diablo.jpg", "monk.jpg", "doctor.jpg", "wizard.jpg" ];
+let cards = [];
 
+window.onload = randomizeCardsPositions();
 
+function randomizeCardsPositions() {
+    for (let i = 0; i < cardsList.length; i++) {
 
+        let newValue = cardsList[Math.floor(Math.random() * cardsList.length)];
 
+        if (cards.indexOf(newValue) === cards.lastIndexOf(newValue)) {
+            cards.push(newValue);
+        } else {i--}
+    }
+}
 
 
 for (let i = 0; i < backToGameButtons.length; i++) {
@@ -40,7 +50,7 @@ for (let nr = 0; nr < cards.length; nr++) {
 
 let revealCard = function(nr) {
 
-    if (cards[nr] !== false) {
+    if (cards[nr] !== false && !locked) {
 
         $(`#c${nr}`)
             .css("background-image", `url("diablogra_cards/${cards[nr]}")`)
@@ -54,22 +64,28 @@ let revealCard = function(nr) {
 
         else {
 
-            if (cards[nr] == cards[pair]) {
+            locked = true;
+
+            if (cards[nr] === cards[pair]) {
 
                 thesameCards(nr,pair);
                 guessedPair++;
                 cards[nr] = false;
                 cards[pair] = false;
+
             } else {
 
                 diffrentCards(nr, pair);
+
             }
 
             turnCounter++;
             $('.score').html(`Turn counter: ${turnCounter}`);
             oneVisible = false;
-            if (guessedPair == 6) {userWins()};
 
+            if (guessedPair === 6) {
+                userWins()
+            }
         }
     }
 };
@@ -89,6 +105,7 @@ function thesameCards(nr, pair) {
             .toggleClass('disappear')
             .css("background-image", `url("")`)
             .css('opacity', '1');
+        locked = false;
 
 
     }, 1500);
@@ -109,6 +126,7 @@ function diffrentCards(nr, pair) {
             .removeClass('cardA')
             .addClass('card')
             .css("background-image", `url("diablogra_cards/cover.jpg")`);
+        locked = false;
 
     }, 1500);
 }
@@ -124,5 +142,8 @@ function userWins() {
 
         }, 1900)
 }
+
+
+
 
 
